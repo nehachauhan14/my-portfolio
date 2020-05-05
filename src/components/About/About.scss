@@ -1,0 +1,56 @@
+
+.aboutSection {
+    min-height: 500px;
+    margin: auto;
+    width: fit-content;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.subTitle {
+    text-align: center;
+    font-size: 20px;
+}
+
+.cartoon {
+    height: 300px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+
+.intro {
+    text-align: center;
+}
+
+.line-1 {
+    font-family: 'Anonymous Pro', monospace;
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 20px auto 10px;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 20px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);   
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 24em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: #000;}
+    to{border-right-color: rgba(200, 0, 0, 0.7);}
+  }

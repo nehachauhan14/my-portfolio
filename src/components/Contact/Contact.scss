@@ -1,0 +1,42 @@
+.contactSection {
+    min-height: 500px;
+    border-radius: 40px;
+    padding: 10px;
+    background-image: linear-gradient(to right, rgba(231, 166, 166, 0.7), rgba(200, 0, 0, 0.5));
+    color: #FFF;
+}
+
+
+.contactTitle {
+    text-align: center;
+}
+
+.contactSubTitle {
+    text-align: center;
+}
+
+.email {
+    font-size: 20px;
+}
+
+.email > a {
+    display: inline-block;
+    margin: 0px 5px;
+    text-decoration: none;    
+    color: #000;
+    font-weight: 700;
+}
+
+.quote {
+    text-align: center;
+    font-weight: 700;
+    max-width: 290px;
+    margin: 16px auto
+}
+
+.dogImg {
+    height: 150px;
+    border-radius: 30%;
+    margin: 60px auto;
+    display: block;
+}
