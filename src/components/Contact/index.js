@@ -14,6 +14,7 @@ const Contact = props => {
             and ~let's talk.
           </p>
           <img src="src/assets/images/dog.gif" alt="dog lover" className="dogImg" />
+          <div>Some stupid change</div>
           <div className="quote">Living, learning, & leveling up one day at a time.</div>
         </section>
 
