@@ -96,6 +96,13 @@ const Contact = (props) => {
             copyright issues &#128522;
           </div>
         </div>
+        <span className="scrollIcon" title="Go to top" style={{display: "block"}} onClick={()=> {
+          scrollTo(0, 0)
+        }}><i className="fa fa-chevron-up"></i>
+        </span>
+        {/* <span className="scrollIcon" onClick={()=> {
+          scrollTo(0, 0)
+        }}>Scroll</span> */}
       </div>
     </section>
   );
