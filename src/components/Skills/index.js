@@ -8,36 +8,36 @@ const Skills = props => {
                 <h1 className="title">SKILLS</h1>
                 <div className="cards">
                     <div className="card">
-                        <img src="src/assets/images/html5.svg" />
+                        <img src="/assets/images/html5.svg" />
                     </div>
                     <div className="card">
-                        <img src="src/assets/images/sass.svg" />
+                        <img src="/assets/images/sass.svg" />
                     </div>
                     <div className="card">
-                        <img src="src/assets/images/javascript.svg" />
+                        <img src="/assets/images/javascript.svg" />
                     </div>
                     <div className="card">
-                    <img src="src/assets/images/bootstrap.svg" />
+                    <img src="/assets/images/bootstrap.svg" />
                     </div>
                     <div className="card">
-                    <img src="src/assets/images/git.svg" />
+                    <img src="/assets/images/git.svg" />
                     </div>
                     <div className="card">
-                    <img src="src/assets/images/node.svg" />
+                    <img src="/assets/images/node.svg" />
                     </div>
                     <div className="card">
-                    <img src="src/assets/images/react.svg" />
+                    <img src="/assets/images/react.svg" />
                     </div>
                     <div className="card">
-                    <img src="src/assets/images/redux.svg" />
+                    <img src="/assets/images/redux.svg" />
                     </div>
                     <div className="card">
-                    <img src="src/assets/images/webpack.svg" />
+                    <img src="/assets/images/webpack.svg" />
                     </div>
                 </div>
                 <div className="resumeBtn">
-                    <a href="src/assets/Resume.pdf" download>
-                        <button className="btn btn-primary">Click to <img src="src/assets/images/download.svg" className="downloadIcon" /> Resume </button>
+                    <a href="/assets/Resume.pdf" download>
+                        <button className="btn btn-primary">Click to <img src="/assets/images/download.svg" className="downloadIcon" /> Resume </button>
                         
                     </a>
                 </div>
