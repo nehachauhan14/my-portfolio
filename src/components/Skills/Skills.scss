@@ -1,0 +1,47 @@
+
+.skillsSection {
+    min-height: 500px;
+}
+
+.skillsSection .content {
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: 10px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: 1;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 15px;
+    flex: 1 1 25%;
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+.resumeBtn {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.downloadIcon {
+    height: 16px;
+}
+
+.card .title {
+    font-size: 20px;
+}
+
+.card > img {
+    height: 128px;
+    width: 128px;
+}

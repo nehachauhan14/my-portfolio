@@ -1,13 +1,15 @@
 .header {
     background-color: #1e272e;
     color: white;
-    position: sticky;
     min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 700;
     z-index: 20;
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 .header a {
