@@ -12,25 +12,20 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Blogs from './components/Blogs';
+import Skills from './components/Skills'
+
 class App extends Component {
-  state = {
-    showComponent: {
-      "about": true,
-      "projects": true,
-      "blogs": true,
-      "contact": true
-    }
-  }
 
   render() {
     return (
       <div>
           <Header />
           <div className="container">
-            {this.state.showComponent.about  ? <About /> : ""}
+            <About />
             {/* {this.state.showComponent.projects  ? <Projects /> : ""} */}
             {/* {this.state.showComponent.blog  ? <Blogs /> : ""} */}
-            {this.state.showComponent.contact  ? <Contact /> : ""}
+            <Skills />
+            <Contact />
           </div>
     </div>
     )

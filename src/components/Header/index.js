@@ -7,7 +7,7 @@ const Header = props => {
         <div className="header">
             <a className="headerLogo" href="/">Neha Chauhan</a>
             <div className="headerOptions">
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#writings">Writings</a></li>
                 <li><a href="#contact">Contact me</a></li>
             </div>

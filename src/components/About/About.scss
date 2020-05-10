@@ -1,6 +1,6 @@
 
 .aboutSection {
-    min-height: 600px;
+    min-height: 700px;
     margin: auto;
     width: fit-content;
 }
@@ -25,6 +25,41 @@
 
 .intro {
     text-align: center;
+}
+
+.contentBtn {
+    margin-top: 40px;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid #212529;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.btn .primary {
+    padding: 0.5rem 2rem;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    transition-property: all;
+    transition-duration: 0.2s;
+    margin-top: 5rem;
 }
 
 .line-1 {

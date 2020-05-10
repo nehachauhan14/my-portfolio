@@ -9,6 +9,11 @@ const About = props => {
                 <img src="src/assets/images/cartoon2.jpeg" className="cartoon" alt="me" />
                 <p className="line-1 anim-typewriter">I am a Web Developer & Dog lover... </p>
                 <div className="intro">I design and code beautifully simple things, and I love what I do.</div>
+                <div className="contentBtn">
+                    <a href="#skills">
+                        <button className="btn btn-primary">Learn More About Me</button>
+                    </a>
+                </div>
             </div>
         </section>
 
