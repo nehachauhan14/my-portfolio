@@ -11,3 +11,17 @@ export const isMobile = () => {
  }
  return false;
 }
+
+const findPos = (obj) => {
+    var curtop = 0;
+    if (obj && obj.offsetParent) {
+        do {
+            curtop = curtop + obj.offsetTop - 18;
+        } while (obj = obj.offsetParent);
+    return [curtop];
+    }
+}
+
+export const scrollToElement = (element) => {
+    window.scroll(0, findPos(document.getElementById(element)));
+}

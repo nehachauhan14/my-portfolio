@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
 import "./Header.scss";
-import { isMobile } from '../../utils';
+import { isMobile, scrollToElement } from '../../utils';
 const Header = props => {
     const mobile = isMobile();
 
@@ -10,12 +10,11 @@ const Header = props => {
         document.getElementById("main").style.marginLeft = "200px";
         document.getElementById("hamburger").style.display = "none";    
     }
-    
+
     const closeSidenav = () => {
         document.getElementById("sidebar").style.width = "0";
         document.getElementById("main").style.marginLeft = "0";
-        document.getElementById("hamburger").style.display = "block";    
-
+        document.getElementById("hamburger").style.display = "block";
     }
 
     console.log("mobile", mobile);
@@ -34,9 +33,9 @@ const Header = props => {
                 </div>
                 <div id="sidebar" className="sidebar">
                         <a href="javascript:void(0)" onClick={()=> closeSidenav()}><img src="/assets/images/close.svg" /></a>  
-                        <a href="/#" onClick={()=> closeSidenav()}>About Me</a>
-                        <a href="#skills" onClick={()=> closeSidenav()}>Skills</a>
-                        <a href="#contact" onClick={()=> closeSidenav()}>Contact me</a>
+                        <a href="javascript:void(0)" onClick={()=> {closeSidenav();scrollToElement("about")}}>About Me</a>
+                        <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("skills")}}>Skills</a>
+                        <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("contact")}}>Contact me</a>
                         <a href="/assets/Resume.pdf" onClick={()=> closeSidenav()} download><img src="/assets/images/resume.svg" /></a>
                         <a href="https://github.com/nehachauhan14" onClick={()=> closeSidenav()} download><img src="/assets/images/github.svg" /></a>
                         <a href="https://www.linkedin.com/in/neha-chauhan-830278a1/" onClick={()=> closeSidenav()} download><img src="/assets/images/linkedin.svg" /></a>
@@ -48,9 +47,9 @@ const Header = props => {
         <div className="header">
             <a className="headerLogo" href="/">Neha Chauhan</a>
             <div className="headerOptions">
-                <li><a href="/">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact me</a></li>
+                <li><a href="javascript:void(0)" onClick={()=> scrollToElement("about")}>About Me</a></li>
+                <li><a href="javascript:void(0)" onClick={()=> scrollToElement("skills")}>Skills</a></li>
+                <li><a href="javascript:void(0)" onClick={()=> scrollToElement("contact")}>Contact me</a></li>
                 <li><a href="/assets/Resume.pdf" download><img src="/assets/images/resume.svg" /></a></li>
                 <li><a href="https://github.com/nehachauhan14" download><img src="/assets/images/github.svg" /></a></li>
                 <li><a href="https://www.linkedin.com/in/neha-chauhan-830278a1/" download><img src="/assets/images/linkedin.svg" /></a></li>
