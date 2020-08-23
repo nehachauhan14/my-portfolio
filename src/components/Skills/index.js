@@ -35,12 +35,6 @@ const Skills = props => {
                     <img src="/assets/images/webpack.svg" />
                     </div>
                 </div>
-                <div className="resumeBtn">
-                    <a href="/assets/Resume.pdf" download>
-                        <button className="btn btn-primary">Click to <img src="/assets/images/download.svg" className="downloadIcon" /> Resume </button>
-                        
-                    </a>
-                </div>
             </div>
         </section>
 

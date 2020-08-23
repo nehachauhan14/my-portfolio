@@ -1,6 +1,7 @@
 .header {
-    background-color: #1e272e;
-    color: white;
+    background-color: white;
+    color: #212121;
+    border-bottom: 1px solid #eee;
     min-height: 60px;
     display: flex;
     align-items: center;
@@ -17,7 +18,7 @@
 }
 
 .headerLogo {
-    color: white;
+    color: #212121;
     font-weight: 700;
     font-size: 22px;
     margin-left: 20px;
@@ -37,4 +38,48 @@
 
 .headerOptions a {
     color: inherit;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: rgb(234 118 118 / 80%);
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.sidebar > a {
+    color: #212121;
+    text-decoration: none;
+    padding: 16px;
+}
+
+.sidebar > a:hover, a:visited {
+    text-decoration: none;
+}
+
+.mobileHeader {
+    background: white;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    z-index: 1;
+}
+
+.mobileHeader > span {
+    padding: 8px;
 }

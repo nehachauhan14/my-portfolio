@@ -56,12 +56,19 @@
     margin: 16px auto;
 }
 
-.socialIcons > div {
+.socialIcons > a {
     height: 24px;
     width: 24px;
     display: inline-block;
     margin: 10px;
+    text-decoration: none;
 }
+
+.socialIcons > a:visited, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 
 .copyRight {
     margin: 16px auto;
@@ -97,3 +104,14 @@
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
+
+@media only screen and (max-width: 600px) {
+    .contactSection .content {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+    }
+    
+}
+  
