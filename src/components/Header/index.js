@@ -35,6 +35,7 @@ const Header = props => {
                         <a href="javascript:void(0)" onClick={()=> closeSidenav()}><img src="/assets/images/close.svg" /></a>  
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav();scrollToElement("about")}}>About Me</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("skills")}}>Skills</a>
+                        <a href="javascript:void(0)" onClick={()=> {closeSidenav();scrollToElement("blogs")}}>Blogs</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("contact")}}>Contact me</a>
                         <a href="/assets/Resume.pdf" onClick={()=> closeSidenav()} download><img src="/assets/images/resume.svg" /></a>
                         <a href="https://github.com/nehachauhan14" onClick={()=> closeSidenav()} download><img src="/assets/images/github.svg" /></a>
@@ -47,8 +48,8 @@ const Header = props => {
         <div className="header">
             <a className="headerLogo" href="/">Neha Chauhan</a>
             <div className="headerOptions">
-                <li><a href="javascript:void(0)" onClick={()=> scrollToElement("about")}>About Me</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("skills")}>Skills</a></li>
+                <li><a href="javascript:void(0)" onClick={()=> scrollToElement("blogs")}>Blogs</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("contact")}>Contact me</a></li>
                 <li><a href="/assets/Resume.pdf" download><img src="/assets/images/resume.svg" /></a></li>
                 <li><a href="https://github.com/nehachauhan14" download><img src="/assets/images/github.svg" /></a></li>

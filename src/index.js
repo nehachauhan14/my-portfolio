@@ -11,6 +11,9 @@ import Skills from './components/Skills'
 
 class App extends Component {
 
+  componentDidMount() {
+    document.getElementById('main').scrollTo(0,0);
+  }
   render() {
     return (
       <div>
@@ -18,8 +21,8 @@ class App extends Component {
             <div className="container" id="main">
             <About />
             {/* {this.state.showComponent.projects  ? <Projects /> : ""} */}
-            {/* {this.state.showComponent.blog  ? <Blogs /> : ""} */}
             <Skills />
+            <Blogs />
             <Contact />
           </div>
     </div>

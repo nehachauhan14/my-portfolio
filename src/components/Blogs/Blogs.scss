@@ -1,3 +1,66 @@
 .blogsSection {
-    min-height: 500px;
+    min-height: 95vh;
+}
+
+.blogContainer {
+    padding: 16px;
+}
+
+.blogList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blogCard {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px #0000001a inset;
+    padding: 8px;
+    max-width: 270px;
+    text-decoration: none;
+    color: unset;
+}
+
+.blogCard:hover,
+.blogCard:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+.imageContainer {
+    height: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.imageContainer > img {
+    height: 180px;
+}
+
+.blogName {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.blogTime {
+    font-size: 14px;
+    color: #949494;
+}
+
+.bar {
+    background: rgb(234 118 118 / 80%);
+    height: 3px;
+    margin: 10px 0px;
+    width: 25%;
+}
+.blogInfo {
+    font-size: 14px;
+    line-height: 13pt;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
 }
