@@ -1,28 +1,28 @@
 import React, { Component } from "react";
-import "./Contact.scss";
+import style from"./Contact.module.scss";
 
 const Contact = (props) => {
   return (
-    <section id="contact" className="contactSection">
-      <div className="content">
-        <h1 className="contactTitle">Get in touch</h1>
-        <div className="contactSubTitle">
+    <section id="contact" className={style.contactSection}>
+      <div className={style.content}>
+        <h1 className={style.contactTitle}>Get in touch</h1>
+        <div className={style.contactSubTitle}>
           <div>Wanna get in Touch ?</div> 
           <span>Email me @</span>
-          <span className="email">
+          <span className={style.email}>
             <a href="mailto:nehachauhan79@gmail.com">nehachauhan79@gmail.com</a>
           </span>
         </div>
         <img
           src="/assets/images/dog.gif"
           alt="dog lover"
-          className="dogImg"
+          className={style.dogImg}
         />
-        <div className="bottomLine">
-          <div className="quote">
+        <div className={style.bottomLine}>
+          <div className={style.quote}>
             Living, learning, & leveling up one day at a time.
           </div>
-          <div className="socialIcons">
+          <div className={style.socialIcons}>
             <a href="https://www.linkedin.com/in/neha-chauhan-830278a1/">
               <svg
                 className="svg-inline--fa fa-linkedin-in fa-w-14 fa-fw"
@@ -69,11 +69,11 @@ const Contact = (props) => {
               </svg>
             </a>
           </div>
-          <div className="copyright">
+          <div className={style.copyright}>
             <span>Designed &amp; Developed by Neha Chauhan</span>
           </div>
         </div>
-        <span className="scrollIcon" title="Go to top" style={{display: "block"}} onClick={()=> {
+        <span className={style.scrollIcon} title="Go to top" style={{display: "block"}} onClick={()=> {
           scrollTo(0, 0)
         }}><i className="fa fa-chevron-up"></i>
         </span>

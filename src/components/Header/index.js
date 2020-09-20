@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link, Route } from 'react-router-dom';
-import "./Header.scss";
+import style from "./Header.module.scss";
 import { isMobile, scrollToElement } from '../../utils';
 const Header = props => {
     const mobile = isMobile();
@@ -22,7 +22,7 @@ const Header = props => {
         return (
             <React.Fragment>
                 <div
-                    className="mobileHeader">
+                    className={style.mobileHeader}>
                     <span id="hamburger" onClick={() => openSidenav()}>
                         <svg viewBox="0 0 100 80" width="30" height="30">
                             <rect width="100" height="20" rx="8"></rect>
@@ -31,7 +31,7 @@ const Header = props => {
                         </svg>
                     </span>
                 </div>
-                <div id="sidebar" className="sidebar">
+                <div id="sidebar" className={style.sidebar}>
                         <a href="javascript:void(0)" onClick={()=> closeSidenav()}><img src="/assets/images/close.svg" /></a>  
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav();scrollToElement("about")}}>About Me</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("skills")}}>Skills</a>
@@ -45,9 +45,9 @@ const Header = props => {
         )
     }
     return (
-        <div className="header">
-            <a className="headerLogo" href="/">Neha Chauhan</a>
-            <div className="headerOptions">
+        <div className={style.header}>
+            <a className={style.headerLogo} href="/">Neha Chauhan</a>
+            <div className={style.headerOptions}>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("skills")}>Skills</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("blogs")}>Blogs</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("contact")}>Contact me</a></li>

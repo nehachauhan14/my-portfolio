@@ -22,7 +22,25 @@ module.exports = {
       {
         test: /\.(scss)$/,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", 
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: "[name]__[local]__[hash:base64:5]",
+          },
+          }
+        ],
+        include: /\.module\.scss$/
+      },
+      {
+        test: /\.(css|scss)$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ],
+        exclude: /\.module\.scss$/
       },
       {
         test: /\.(png|jpe?g|gif)$/i,

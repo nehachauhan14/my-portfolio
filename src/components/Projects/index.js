@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import "./Projects.scss";
+import style from "./Projects.module.scss";
 
 const Projects = props => {
     return (
-        <section id="projects" className="projectsSection">
+        <section id="projects" className={style.projectsSection}>
             Here is the list of some exciting projects i have worked on !!!
 
             Loading!!!
