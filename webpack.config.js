@@ -2,12 +2,23 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin(),
+      new CssMinimizerPlugin(),
+    ],
+
   },
   mode: 'devlopment',
   module: {
@@ -22,7 +33,7 @@ module.exports = {
       {
         test: /\.(scss)$/,
         exclude: /node_modules/,
-        use: ["style-loader", 
+        use: [MiniCssExtractPlugin.loader, 
           {
             loader: 'css-loader',
             options: {
@@ -66,6 +77,9 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {from:'src/assets',to:'assets'} 
-    ]), 
+    ]),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contentHash].css"
+    }),
   ]
 };
