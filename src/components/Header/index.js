@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 import style from "./Header.module.scss";
 import { isMobile, scrollToElement } from '../../utils';
 const Header = props => {
+    
     const mobile = isMobile();
 
     const openSidenav = () => {
@@ -15,6 +16,17 @@ const Header = props => {
         document.getElementById("sidebar").style.width = "0";
         document.getElementById("main").style.marginLeft = "0";
         document.getElementById("hamburger").style.display = "block";
+    }
+
+    const changeTheam = () => {
+        let currentTheam = document.documentElement.className || "theme-light";
+        let newTheam = "theme-dark";
+        document.documentElement.className = '';
+        if( currentTheam == "theme-dark") {
+            newTheam =  "theme-light";
+        }
+        document.documentElement.classList.add(newTheam);
+        
     }
 
     console.log("mobile", mobile);
@@ -48,6 +60,7 @@ const Header = props => {
         <div className={style.header}>
             <a className={style.headerLogo} href="/">Neha Chauhan</a>
             <div className={style.headerOptions}>
+                <li><button onClick={() => changeTheam()}>Mode</button></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("skills")}>Skills</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("blogs")}>Blogs</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("contact")}>Contact me</a></li>

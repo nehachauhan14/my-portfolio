@@ -1,6 +1,7 @@
+@import "/src/assets/css/index.scss";
+
 .header {
-    background-color: white;
-    color: #212121;
+    @include theme-aware('background', 'backgroundColor');
     border-bottom: 1px solid #eee;
     min-height: 60px;
     display: flex;
@@ -11,33 +12,34 @@
     width: 100%;
     position: sticky;
     top: 0;
-}
-
-.header a {
-    text-decoration: none;
+    
+    > a {
+        text-decoration: none;
+        @include theme-aware('color', 'logoColor');
+    }
 }
 
 .headerLogo {
-    color: #212121;
     font-weight: 700;
     font-size: 22px;
     margin-left: 20px;
+    color: inherit;
 }
 
 .headerOptions {
+    @include theme-aware('color', 'linkColor');
     list-style: none;
     display: flex;
     justify-content: space-around;
     cursor: pointer;
-    color: inherit;
-}
 
-.headerOptions > li {
-    padding: 10px 20px;
-}
-
-.headerOptions a {
-    color: inherit;
+    >li {
+        padding: 10px 20px;
+        >a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
 }
 
 .sidebar {
@@ -68,7 +70,7 @@
 }
 
 .mobileHeader {
-    background: white;
+    // background: white;
     border-bottom: 1px solid #ccc;
     display: flex;
     align-items: center;

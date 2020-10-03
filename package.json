@@ -33,10 +33,12 @@
     "html-loader": "^1.0.0",
     "html-webpack-plugin": "^3.0.7",
     "mini-css-extract-plugin": "^0.11.2",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^4.2.2",
     "url-loader": "^4.1.0",
-    "webpack": "^4.29.6",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
   }

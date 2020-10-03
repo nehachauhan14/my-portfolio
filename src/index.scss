@@ -1,8 +1,23 @@
+@import "./assets/css";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @include theme-aware('background', 'backgroundColor');
+    @include theme-aware('color', 'textColor');
+    font-family: 'Raleway', serif;
+    font-size: 16px;
+    margin: 0;
+}
+
 .container {
     position: relative;
 }
 
 .title {
+    @include theme-aware('color', 'headerColor');
     text-align: center;
     font-size: 36px;
     font-weight: 600;

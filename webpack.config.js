@@ -39,17 +39,19 @@ module.exports = {
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: "[name]__[local]__[hash:base64:5]",
+              localIdentName: "[local]",
           },
-          }
+          },
+          'sass-loader'
         ],
         include: /\.module\.scss$/
       },
       {
         test: /\.(css|scss)$/,
         use: [
-          'style-loader',
-          'css-loader'
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
         ],
         exclude: /\.module\.scss$/
       },

@@ -1,0 +1,20 @@
+$main-color: #212121;
+
+$themes: (
+    light: (
+        backgroundColor: #ffffff,
+        textColor: #212121,
+        headerColor: #212121,
+        logoColor: #212121,
+        linkColor: #212121,
+        borderStyle : 1px solid #212529,
+    ), 
+    dark: (
+        backgroundColor: #252934,
+        textColor: #FFF,
+        headerColor: #e31b6d,
+        logoColor: #FFF,
+        linkColor: #e31b6d,
+        borderStyle : 1px solid #e31b6d,
+    )
+)
