@@ -18,7 +18,6 @@ module.exports = {
       new TerserPlugin(),
       new CssMinimizerPlugin(),
     ],
-
   },
   mode: 'devlopment',
   module: {

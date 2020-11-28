@@ -2,7 +2,7 @@
 
 .header {
     @include theme-aware('background', 'backgroundColor');
-    border-bottom: 1px solid #eee;
+    border-bottom: 3px solid $secondary-color;
     min-height: 60px;
     display: flex;
     align-items: center;

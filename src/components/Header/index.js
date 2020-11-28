@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import { Link, Route } from 'react-router-dom';
 import style from "./Header.module.scss";
 import { isMobile, scrollToElement } from '../../utils';
 const Header = props => {
-    
+    const [currentTheam, setCurrentTheam] = useState("theme-light");
+    const [imgSrc, setImgSrc] = useState("https://www.flaticon.com/premium-icon/icons/svg/2920/2920682.svg");
     const mobile = isMobile();
 
     const openSidenav = () => {
@@ -18,18 +19,25 @@ const Header = props => {
         document.getElementById("hamburger").style.display = "block";
     }
 
+    useEffect(()=> {
+        if(currentTheam == "theme-light") {
+            setImgSrc("https://www.flaticon.com/premium-icon/icons/svg/2920/2920682.svg")
+        } else {
+            setImgSrc("https://www.flaticon.com/premium-icon/icons/svg/3222/3222675.svg")
+        }
+    }, [currentTheam]);
+    
     const changeTheam = () => {
-        let currentTheam = document.documentElement.className || "theme-light";
         let newTheam = "theme-dark";
         document.documentElement.className = '';
         if( currentTheam == "theme-dark") {
             newTheam =  "theme-light";
         }
+        setCurrentTheam(newTheam);
         document.documentElement.classList.add(newTheam);
         
     }
 
-    console.log("mobile", mobile);
     if(mobile) {
         return (
             <React.Fragment>
@@ -49,7 +57,7 @@ const Header = props => {
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("skills")}}>Skills</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav();scrollToElement("blogs")}}>Blogs</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("contact")}}>Contact me</a>
-                        <a href="/assets/Resume.pdf" onClick={()=> closeSidenav()} download><img src="/assets/images/resume.svg" /></a>
+                        <a href="/assets/Resume.pdf" onClick={()=> closeSidenav()} download><img src="https://www.flaticon.com/premium-icon/icons/svg/3095/3095873.svg" height="18"/></a>
                         <a href="https://github.com/nehachauhan14" onClick={()=> closeSidenav()} download><img src="/assets/images/github.svg" /></a>
                         <a href="https://www.linkedin.com/in/neha-chauhan-830278a1/" onClick={()=> closeSidenav()} download><img src="/assets/images/linkedin.svg" /></a>
                 </div>
@@ -60,11 +68,13 @@ const Header = props => {
         <div className={style.header}>
             <a className={style.headerLogo} href="/">Neha Chauhan</a>
             <div className={style.headerOptions}>
-                <li><button onClick={() => changeTheam()}>Mode</button></li>
+                <li onClick={() => changeTheam()}>
+                    <img src={imgSrc} alt="Theme icon" height="18" />
+                </li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("skills")}>Skills</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("blogs")}>Blogs</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("contact")}>Contact me</a></li>
-                <li><a href="/assets/Resume.pdf" download><img src="/assets/images/resume.svg" /></a></li>
+                <li><a href="/assets/Resume.pdf" download><img src="https://www.flaticon.com/premium-icon/icons/svg/3095/3095873.svg" height="18" /></a></li>
                 <li><a href="https://github.com/nehachauhan14" download><img src="/assets/images/github.svg" /></a></li>
                 <li><a href="https://www.linkedin.com/in/neha-chauhan-830278a1/" download><img src="/assets/images/linkedin.svg" /></a></li>
             </div>
