@@ -20,7 +20,7 @@ class App extends Component {
           <Header />
             <div className="container" id="main">
             <About />
-            {/* {this.state.showComponent.projects  ? <Projects /> : ""} */}
+            <Projects />
             <Skills />
             <Blogs />
             <Contact />

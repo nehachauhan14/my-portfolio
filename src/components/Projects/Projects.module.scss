@@ -1,3 +1,105 @@
-.projectsSection {
-    min-height: 500px;
+.container {
+    min-height: 100vh;
+}
+
+.projectContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 16px;
+    margin-top: 40px;
+}
+
+.content {
+    margin-left: 70px;
+    margin-right: 70px;
+    padding: 10px;
+}
+
+.image {
+    border: 1px solid grey;
+    border-radius: 25px;
+}
+
+.projectDescription {
+    display: flex;
+    flex-flow: column;
+
+    .projectName {
+
+    }
+
+    .projectDetail {
+        color: grey;
+        font-size: 16px;
+    }
+
+    .techstack {
+        color: grey;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+.ctas {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+
+    .btn {
+        text-decoration: none;
+        border-radius: 25px;
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #212121;
+        width: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.primary {
+            background: #212121;
+            color: white;
+        }
+        &.secondary {
+            background: white;
+            color: #212121;
+            margin-left: 20px;
+
+            &:hover {
+                background: #212121;
+                color: white;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .projectContainer {
+        flex-flow: column;    
+    }
+
+    .image  {
+        max-width: 100%;
+    }
+    
+    .projectDescription{
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .image {
+        height: 300px;
+    }
+
+    .projectDetail {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .techstack {
+        font-size: 16px;
+    }
 }
