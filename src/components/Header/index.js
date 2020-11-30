@@ -46,6 +46,7 @@ const Header = props => {
                 <div id="sidebar" className={style.sidebar}>
                         <a href="javascript:void(0)" onClick={()=> closeSidenav()}><img src="/assets/images/close.svg" /></a>  
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav();scrollToElement("about")}}>About Me</a>
+                        <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("projects")}}>Projects</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("skills")}}>Skills</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav();scrollToElement("blogs")}}>Blogs</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("contact")}}>Contact me</a>
@@ -60,7 +61,8 @@ const Header = props => {
         <div className={style.header}>
             <a className={style.headerLogo} href="/">Neha Chauhan</a>
             <div className={style.headerOptions}>
-                <li><button onClick={() => changeTheam()}>Mode</button></li>
+                {/* <li><button onClick={() => changeTheam()}>Mode</button></li> */}
+                <li><a href="javascript:void(0)" onClick={()=> scrollToElement("projects")}>Projects</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("skills")}>Skills</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("blogs")}>Blogs</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("contact")}>Contact me</a></li>
