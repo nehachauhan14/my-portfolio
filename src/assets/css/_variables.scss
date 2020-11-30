@@ -1,20 +1,26 @@
 $main-color: #212121;
+$optinal-color: #e31b6d;
+$secondary-color: #04c2c9;
+$black-color: #212121;
+$darkblack-color: #252934;
+$white-color: #FFF;
 
 $themes: (
     light: (
-        backgroundColor: #ffffff,
-        textColor: #212121,
-        headerColor: #212121,
-        logoColor: #212121,
-        linkColor: #212121,
-        borderStyle : 1px solid #212529,
+        backgroundColor: $white-color,
+        textColor: $black-color,
+        headerColor: $black-color,
+        logoColor: $black-color,
+        linkColor: $black-color,
+        borderStyle : 1px solid $secondary-color,
     ), 
     dark: (
-        backgroundColor: #252934,
-        textColor: #FFF,
-        headerColor: #e31b6d,
-        logoColor: #FFF,
-        linkColor: #e31b6d,
-        borderStyle : 1px solid #e31b6d,
+        backgroundColor: $darkblack-color,
+        textColor: $white-color,
+        headerColor: $secondary-color,
+        logoColor: $white-color,
+        linkColor: $secondary-color,
+        borderStyle : 1px solid $secondary-color,
     )
 )
+
