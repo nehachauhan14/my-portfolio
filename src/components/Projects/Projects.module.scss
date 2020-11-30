@@ -11,8 +11,7 @@
 }
 
 .content {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin: 10px;
     padding: 10px;
 }
 
@@ -101,5 +100,10 @@
 
     .techstack {
         font-size: 16px;
+    }
+
+    .contactSection .content {
+        margin-left: 70px;
+        margin-right: 70px;
     }
 }

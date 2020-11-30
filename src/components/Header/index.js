@@ -58,7 +58,7 @@ const Header = props => {
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("skills")}}>Skills</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav();scrollToElement("blogs")}}>Blogs</a>
                         <a href="javascript:void(0)" onClick={()=> {closeSidenav(); scrollToElement("contact")}}>Contact me</a>
-                        <a href="/assets/Resume.pdf" onClick={()=> closeSidenav()} download><img src="https://www.flaticon.com/premium-icon/icons/svg/3095/3095873.svg" height="18"/></a>
+                        <a href="/assets/Resume.pdf" onClick={()=> closeSidenav()} download><img src="/assets/images/resume.svg"/></a>
                         <a href="https://github.com/nehachauhan14" onClick={()=> closeSidenav()} download><img src="/assets/images/github.svg" /></a>
                         <a href="https://www.linkedin.com/in/neha-chauhan-830278a1/" onClick={()=> closeSidenav()} download><img src="/assets/images/linkedin.svg" /></a>
                 </div>
@@ -69,14 +69,14 @@ const Header = props => {
         <div className={style.header}>
             <a className={style.headerLogo} href="/">Neha Chauhan</a>
             <div className={style.headerOptions}>
-                <li onClick={() => changeTheam()}>
+                {/* <li onClick={() => changeTheam()}>
                     <img src={imgSrc} alt="Theme icon" height="18" />
-                </li>
+                </li> */}
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("projects")}>Projects</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("skills")}>Skills</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("blogs")}>Blogs</a></li>
                 <li><a href="javascript:void(0)" onClick={()=> scrollToElement("contact")}>Contact me</a></li>
-                <li><a href="/assets/Resume.pdf" download><img src="https://www.flaticon.com/premium-icon/icons/svg/3095/3095873.svg" height="18" /></a></li>
+                <li><a href="/assets/Resume.pdf" download><img src="/assets/images/resume.svg" /></a></li>
                 <li><a href="https://github.com/nehachauhan14" download><img src="/assets/images/github.svg" /></a></li>
                 <li><a href="https://www.linkedin.com/in/neha-chauhan-830278a1/" download><img src="/assets/images/linkedin.svg" /></a></li>
             </div>
