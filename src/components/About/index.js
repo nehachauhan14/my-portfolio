@@ -15,7 +15,7 @@ const About = props => {
                     : <p className={`${style.line1} ${style.animTypewriter}`}>I am a Web Developer & Dog lover... </p>}
                 <div className={style.intro}>I design and code beautifully simple things, and I love what I do.</div>
                 <div className={style.contentBtn}>
-                    <button className={`${style.btn} ${style.primary}`} onClick={() => scrollToElement("skills")}>Learn More About Me</button>
+                    <button className={`${style.btn} ${style.primary}`} onClick={() => scrollToElement("projects")}>Learn More About Me</button>
                 </div>
             </div>
         </section>
